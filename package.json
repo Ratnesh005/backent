@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyush40/rest"
+  },
   "author": "piyush",
   "license": "ISC",
   "dependencies": {
