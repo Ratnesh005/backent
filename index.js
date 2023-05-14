@@ -9,27 +9,27 @@ global.foodData = require('./db')(function call(err, data, CatData) {
   const express = require('express')
   const app = express()
   const port = 5000
-  // app.use((req, res, next) => {
-  //   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  //   res.header(
-  //     "Access-Control-Allow-Headers",
-  //     "Origin, X-Requested-With, Content-Type, Accept"
-  //   );
-  //   next();
-  // });
+  app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
 
 
   // this code is used for the hosting on the server
-  app.use(express.static(path.join(__dirname, "./client/build")));
-  app.get("*", function(_,res)
-  {
-    res.sendFile(
-      function(err)
-      {
-        res.status(500).send(err);
-      }
-    )
-  })
+  // app.use(express.static(path.join(__dirname, "./client/build")));
+  // app.get("*", function(_,res)
+  // {
+  //   res.sendFile(
+  //     function(err)
+  //     {
+  //       res.status(500).send(err);
+  //     }
+  //   )
+  // })
 
 
 
